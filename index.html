@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>README.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "README.md";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#metalsmith-classeur">metalsmith-classeur</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#install">install</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#usage">usage</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#example">example</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#options">options</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#author">Author</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#contributing">Contributing</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#license">License</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="docs markdown"><div class="pilwrap" id="metalsmith-classeur">
+  <h1>
+    <a href="#metalsmith-classeur" name="metalsmith-classeur" class="pilcrow"></a>
+metalsmith-classeur
+  </h1>
+</div>
+<p><img src="https://nodei.co/npm/metalsmith-classeur.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="nodei.co"></p>
+<p><img src="https://img.shields.io/npm/v/metalsmith-classeur.svg" alt="npm"></p>
+<p><img src="https://img.shields.io/github/issues/leviwheatcroft/metalsmith-classeur.svg" alt="github-issues"></p>
+<p><img src="https://img.shields.io/github/stars/leviwheatcroft/metalsmith-classeur.svg" alt="stars"></p>
+<p><img src="https://img.shields.io/github/forks/leviwheatcroft/metalsmith-classeur.svg" alt="forks"></p>
+<p><a href="https://metalsmith.io">metalsmith</a> to scrape content from classeur</p>
+<p>Highlights:</p>
+<ul>
+<li>fancy async stream for api requests</li>
+<li>super easy setup</li>
+</ul>
+<p>See the <a href="https://leviwheatcroft.github.io/metalsmith-classeur" title="fancy annotated source">annotated source</a> or <a href="https://github.com/leviwheatcroft/metalsmith-classeur" title="github repo">github repo</a></p>
+<div class="pilwrap" id="install">
+  <h2>
+    <a href="#install" name="install" class="pilcrow"></a>
+install
+  </h2>
+</div>
+<p><code>npm i --save github:leviwheatcroft/metalsmith-classeur</code></p>
+<div class="pilwrap" id="usage">
+  <h2>
+    <a href="#usage" name="usage" class="pilcrow"></a>
+usage
+  </h2>
+</div>
+<div class="pilwrap" id="example">
+  <h3>
+    <a href="#example" name="example" class="pilcrow"></a>
+example
+  </h3>
+</div>
+<pre><code class="javascript">Metalsmith(<span class="hljs-string">'src'</span>)
+.use(googleDrive({
+  <span class="hljs-attr">auth</span>: config.get(<span class="hljs-string">'driveAuth'</span>),
+  <span class="hljs-attr">src</span>: <span class="hljs-string">'0B1QpLgu4qk48R1hDBi1wWFkyV2s'</span>,
+  <span class="hljs-attr">dest</span>: <span class="hljs-string">'articles'</span>
+}))
+.build( ... )
+</code></pre>
+<div class="pilwrap" id="options">
+  <h3>
+    <a href="#options" name="options" class="pilcrow"></a>
+options
+  </h3>
+</div>
+<ul>
+<li><code>srcId</code> {String} (required) id of classeur folder you wish to scrape (get this from the shareable url for the folder</li>
+<li><code>destPath</code> {String} (required) the path under which you want to place the scraped files</li>
+<li><code>userId</code> {String} (required) userId from classeur</li>
+<li><code>apiKey</code> {String} (required) apiKey from classeur</li>
+</ul>
+<div class="pilwrap" id="author">
+  <h2>
+    <a href="#author" name="author" class="pilcrow"></a>
+Author
+  </h2>
+</div>
+<p>Levi Wheatcroft <a href="mailto:levi@wht.cr.html">levi@wht.cr</a></p>
+<div class="pilwrap" id="contributing">
+  <h2>
+    <a href="#contributing" name="contributing" class="pilcrow"></a>
+Contributing
+  </h2>
+</div>
+<p>Contributions welcome; Please submit all pull requests against the master
+branch.</p>
+<div class="pilwrap" id="license">
+  <h2>
+    <a href="#license" name="license" class="pilcrow"></a>
+License
+  </h2>
+</div>
+<ul>
+<li><strong>MIT</strong> : http://opensource.org/licenses/MIT</li>
+</ul>
+</div>
+  </div>
+</body>
+</html>
