@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-classeur",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "metalsmith plugin scrape content from classeur",
   "main": "dist/index.js",
   "scripts": {
