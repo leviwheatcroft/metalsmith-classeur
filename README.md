@@ -1,41 +1,30 @@
-# metalsmith-google-drive
+# metalsmith-classeur
 
-![nodei.co](https://nodei.co/npm/metalsmith-google-drive.png?downloads=true&downloadRank=true&stars=true)
+![nodei.co](https://nodei.co/npm/metalsmith-classeur.png?downloads=true&downloadRank=true&stars=true)
 
-![npm](https://img.shields.io/npm/v/metalsmith-google-drive.svg)
+![npm](https://img.shields.io/npm/v/metalsmith-classeur.svg)
 
-![github-issues](https://img.shields.io/github/issues/leviwheatcroft/metalsmith-google-drive.svg)
+![github-issues](https://img.shields.io/github/issues/leviwheatcroft/metalsmith-classeur.svg)
 
-![stars](https://img.shields.io/github/stars/leviwheatcroft/metalsmith-google-drive.svg)
+![stars](https://img.shields.io/github/stars/leviwheatcroft/metalsmith-classeur.svg)
 
-![forks](https://img.shields.io/github/forks/leviwheatcroft/metalsmith-google-drive.svg)
+![forks](https://img.shields.io/github/forks/leviwheatcroft/metalsmith-classeur.svg)
 
-[metalsmith](https://metalsmith.io) to scrape files from google drive
+[metalsmith](https://metalsmith.io) to scrape content from classeur
 
 Highlights:
 
- * requests token authorisation via CLI
- * caches token and files, only requests changed files
- * no tests yet
+ * fancy async stream for api requests
+ * super easy setup
 
-
-See the [annotated source][1] or [github repo][4]
+See the [annotated source][annotated source] or [github repo][github repo]
 
 ## install
 
-`npm i --save github:leviwheatcroft/metalsmith-google-drive`
+`npm i --save github:leviwheatcroft/metalsmith-classeur`
 
 ## usage
 
-### api credentials
-
-Follow [this guide][2], go through A to G under *Step 1*, the downloaded file
-will contain the credentials you need to pass into this plugin. In these
-examples I'm using [config][3] to store them.
-
-Once you've authed, the token will be printed to console, you can store this
-token in a config file if you wish, but be aware that it's sensitive so put it
-somewhere which isn't tracked.
 
 ### example
 
@@ -51,21 +40,10 @@ Metalsmith('src')
 
 ### options
 
- * `src` {String} being the drive id of the parent folder you want to scrape
- * `dest` {String} the path under which you want to place the scraped files in
-    metalsmith
- * `auth` {Object} containing `client_id`, `client_secret` and `redirect_uris`
- * `cache` {Boolean} (default: true) store files in cache
-
-### notes
-
- * to get a google drive folder id just view it in your browser and copy the id
-   from the url
- * files in subfolders on google drive will be included, but their containing
-   folders will not be included in the path in metalsmith. In otherwords, this
-   plugin does a recursive search but flattens the result.
- * files scraped from drive will not be stored in your file system, they're
-   added directly to metalsmith `files` structure during build.
+ * `srcId` {String} (required) id of classeur folder you wish to scrape (get this from the shareable url for the folder
+ * `destPath` {String} (required) the path under which you want to place the scraped files
+ * `userId` {String} (required) userId from classeur
+ * `apiKey` {String} (required) apiKey from classeur
 
 ## Author
 
@@ -80,7 +58,5 @@ branch.
 
  - **MIT** : http://opensource.org/licenses/MIT
 
-[1]: https://leviwheatcroft.github.io/metalsmith-google-drive "fancy annotated source"
-[2]: https://developers.google.com/drive/v3/web/quickstart/nodejs "google drive nodejs quickstart"
-[3]: https://www.npmjs.com/package/config "config package on npm registry"
-[4]: https://github.com/leviwheatcroft/metalsmith-google-drive "github repo"
+[annotated source]: https://leviwheatcroft.github.io/metalsmith-classeur "fancy annotated source"
+[github repo]: https://github.com/leviwheatcroft/metalsmith-classeur "github repo"
