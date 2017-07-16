@@ -5,6 +5,8 @@ import {
 import config from 'config'
 import Metalsmith from 'metalsmith'
 import assert from 'assert'
+import debug from 'debug'
+const dbg = debug('metalsmith-classeur')
 
 // import debug from 'debug'
 // const dbg = debug('metalsmith-google-drive')

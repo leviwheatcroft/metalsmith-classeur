@@ -30,11 +30,15 @@ See the [annotated source][annotated source] or [github repo][github repo]
 
 ```javascript
 Metalsmith('src')
-.use(googleDrive({
-  auth: config.get('driveAuth'),
-  src: '0B1QpLgu4qk48R1hDBi1wWFkyV2s',
-  dest: 'articles'
-}))
+.use(
+  classeur({
+    userId: 'aH7WHo2HQFrX5CHbGZx4',
+    apiKey: '9aXKQnP2UjjEeSSUcyGCMAOhnm4Vsf8u',
+    srcId: 'EKZEhM2Ju4EJHHeqNFOG',
+    destPath: 'articles',
+    invalidateCache: true
+  })
+)
 .build( ... )
 ```
 

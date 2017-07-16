@@ -38,7 +38,7 @@
   "dependencies": {
     "classeur-api-client": "^0.3.3",
     "debug": "^2.6.6",
-    "metalsmith-cache": "^0.1.0",
+    "metalsmith-cache": "^1.1.0",
     "multimatch": "^2.1.0",
     "vow": "^0.4.13"
   },
