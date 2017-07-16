@@ -96,11 +96,15 @@ example
   </h3>
 </div>
 <pre><code class="javascript">Metalsmith(<span class="hljs-string">'src'</span>)
-.use(googleDrive({
-  <span class="hljs-attr">auth</span>: config.get(<span class="hljs-string">'driveAuth'</span>),
-  <span class="hljs-attr">src</span>: <span class="hljs-string">'0B1QpLgu4qk48R1hDBi1wWFkyV2s'</span>,
-  <span class="hljs-attr">dest</span>: <span class="hljs-string">'articles'</span>
-}))
+.use(
+  classeur({
+    <span class="hljs-attr">userId</span>: <span class="hljs-string">'aH7WHo2HQFrX5CHbGZx4'</span>,
+    <span class="hljs-attr">apiKey</span>: <span class="hljs-string">'9aXKQnP2UjjEeSSUcyGCMAOhnm4Vsf8u'</span>,
+    <span class="hljs-attr">srcId</span>: <span class="hljs-string">'EKZEhM2Ju4EJHHeqNFOG'</span>,
+    <span class="hljs-attr">destPath</span>: <span class="hljs-string">'articles'</span>,
+    <span class="hljs-attr">invalidateCache</span>: <span class="hljs-literal">true</span>
+  })
+)
 .build( ... )
 </code></pre>
 <div class="pilwrap" id="options">
