@@ -1,0 +1,109 @@
+[
+    {
+        "scope": "https://app.classeur.io:443",
+        "method": "GET",
+        "path": "/api/v2/folders/YxU2MGcWVMVjLHUbDIKZ/files?sort=updated&direction=desc",
+        "body": "",
+        "status": 206,
+        "response": [
+            {
+                "id": "IMTe6hZOd8XjBoUYzqS4",
+                "name": "test file",
+                "sharing": "r",
+                "updated": 1504136087553,
+                "userId": "aH6XGo2IRErX5CHbGZx2"
+            },
+            {
+                "id": "BpgSHyDZh1KtTwOYABEQ",
+                "name": "readme",
+                "sharing": "r",
+                "updated": 1504136072282,
+                "userId": "aH6XGo2IRErX5CHbGZx2"
+            }
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.9.15",
+            "Date",
+            "Wed, 30 Aug 2017 23:36:34 GMT",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Content-Length",
+            "236",
+            "Connection",
+            "keep-alive",
+            "X-Powered-By",
+            "Express",
+            "Accept-Ranges",
+            "items",
+            "Content-Range",
+            "items 0-1/2",
+            "ETag",
+            "W/\"ec-64b66fe4\"",
+            "Vary",
+            "Accept-Encoding"
+        ]
+    },
+    {
+        "scope": "https://app.classeur.io:443",
+        "method": "GET",
+        "path": "/api/v2/files/IMTe6hZOd8XjBoUYzqS4/contentRevs/last",
+        "body": "",
+        "status": 200,
+        "response": {
+            "comments": {},
+            "discussions": {},
+            "properties": {},
+            "rev": 4,
+            "text": "some test content\n"
+        },
+        "rawHeaders": [
+            "Server",
+            "nginx/1.9.15",
+            "Date",
+            "Wed, 30 Aug 2017 23:36:34 GMT",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Content-Length",
+            "85",
+            "Connection",
+            "keep-alive",
+            "X-Powered-By",
+            "Express",
+            "ETag",
+            "W/\"4\"",
+            "Vary",
+            "Accept-Encoding"
+        ]
+    },
+    {
+        "scope": "https://app.classeur.io:443",
+        "method": "GET",
+        "path": "/api/v2/files/BpgSHyDZh1KtTwOYABEQ/contentRevs/last",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b080000000000000395557f4f1b3910fd2a738b7484886c24447577b99f15a2a4a55ce971bd56254871bc935d53afbdf5d80911e2bbdf78bd21b4e4c4f58f4499f1f83dfbf9cde43693b6aed178ca46b777fb59a1480622654d97689c6dd079855dec70918d0ef6338f373e1b653b50a3179a6ae5ab81d48208839b9889f9eed2d802552eed55aff2bea1d170b8ce0c4d530fb7eccb1b53fe5ed8a5d15614f4ab7701bf5f877f09f32965c80b9716f73aa2a6de70a8bacca952a80bca55625a6ce5a245d9ed2f391f6603451490fe1329550d53d550e3422d2b145e3a3bf74f10b4277e0ab82dfa36dcb9759f9ec46d8bbe05f772b3b8c1dee4187a0fbc05924e3408d21acff681b9b3353c34c0589595e68fa7510ca10f7361e40a04ad8c04f20e450d7c38108d02879f59554f6d1d05761c201702a10f4ddc7e8108be42b814c6582f3c1640363889578f33c0a0dda3327063afbe0822dace0e28c3826b1da3299b04140c06241608a976f4b460d30e29902831fe8ed10ee08da81bdd26a6d3e9b55808564a357e62ceee317abbe4e42eab9d07c21e5ffa5eb9de6d8c8041d1bd2c46b02bc63fbc1fdb83f1db17eec3b3a3f1ece4e3cde1ee7e2a62e54e71c5453f890fa76fcdf9c1bbebeb63bcb8782757274767cfdf54a63efc87e63f86f506666d418f4f3f1e576707afc2e1f1abf1183ffff9e2cdc9baa6e0773817be8adcdcf75223ad97945908ad0ad6fa48c80a47109b302eddf155e26d6641e9a207799ec35e7bfdb528b6f171a4744698b6e798c2ed8577ca9477d08befaf1c167ba00ab0f37b39d820ba6033ac6c80a5a2ea81f17a257ab684a264bd680eaa04bb6aa61182d3adb762364124e2f5e5b673c7ea8657219848baac94ac12b560873375a3854c3e4c872860ae589f849d9e6c3b725afbba49e2aef486db77a5b5c7adc5823e0fbeb26df09a8d0aefef9d0abf44e7feb1ac7c2edd6f5df51137a953b3e09921a636313f0a2c51f39f00fe0ce79a9b8eef16666c52e0ee8026f0d7ba39419422b64d2b402dc84755678ebbbaca3ba2d74aa2a1d6fc30807effece5dffd3e8c208e119e22fc57625293e6d695439daa69c865ede479d4ca69671c405ff6639eba348eb92d9d0993ac9b355fe14d322679380c36f81d200bf13f6625133c4089a81393ddfd0b9d062b2a4c070000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.9.15",
+            "Date",
+            "Wed, 30 Aug 2017 23:36:35 GMT",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "keep-alive",
+            "X-Powered-By",
+            "Express",
+            "ETag",
+            "W/\"2\"",
+            "Vary",
+            "Accept-Encoding",
+            "Content-Encoding",
+            "gzip"
+        ]
+    }
+]

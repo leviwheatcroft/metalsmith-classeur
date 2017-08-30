@@ -23,24 +23,20 @@ describe('metalsmith-classeur test', () => {
     // cloudinary.api.resources.restore()
   })
   it('should be able to scrape a folder', (done) => {
-    nockBack('nock', (writeRequests) => {
+    nockBack('scrape', (writeRequests) => {
       Metalsmith('test/fixtures/scrape')
       .use(classeur(Object.assign(
         {
-          srcId: 'CRYEgM2Ju4DHKKeqNDOG',
           destPath: 'articles'
         },
         config.get('metalsmith-classeur')
       )))
       .use((files) => {
-        assert.ok(files['articles/test'])
+        assert.ok(files['articles/test-file'])
       })
       .build((err, files) => {
         if (err) return done(err)
-
-        // if you're updating the test, uncomment this to write api requests to
-        // fixtures
-        // writeRequests()
+        writeRequests()
         done()
       })
     })

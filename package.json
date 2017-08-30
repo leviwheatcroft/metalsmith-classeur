@@ -40,6 +40,7 @@
     "debug": "^2.6.6",
     "metalsmith-cache": "^1.1.0",
     "multimatch": "^2.1.0",
+    "slugify": "^1.2.1",
     "vow": "^0.4.13"
   },
   "devDependencies": {
