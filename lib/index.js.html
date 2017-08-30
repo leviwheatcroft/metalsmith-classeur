@@ -97,6 +97,7 @@
   FileCache,
   ValueCache
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'metalsmith-cache'</span>
+<span class="hljs-keyword">import</span> slugify <span class="hljs-keyword">from</span> <span class="hljs-string">'slugify'</span>
 
 <span class="hljs-keyword">const</span> dbg = debug(<span class="hljs-string">'metalsmith-classeur'</span>)
 <span class="hljs-keyword">const</span> host = <span class="hljs-string">'https://app.classeur.io'</span>
@@ -724,6 +725,8 @@ coerceFile
     <span class="hljs-keyword">delete</span> file.text
     file.modifiedDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(file.updated)
     <span class="hljs-keyword">delete</span> file.updated
+    file.slug = slugify(file.name)
+    file.path = join(<span class="hljs-keyword">this</span>.destPath, file.slug)
     <span class="hljs-built_in">Object</span>.assign(file, file.properties)
     <span class="hljs-keyword">delete</span> file.properties
     <span class="hljs-keyword">return</span> file
@@ -759,7 +762,7 @@ storeFile
         </td>
         <td class="code highlight">
           <pre class="javascript">  storeFile (file) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.fileCache.store(join(<span class="hljs-keyword">this</span>.destPath, file.name), file)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.fileCache.store(file.path, file)
   }
 </pre>
         </td>

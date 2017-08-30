@@ -107,37 +107,21 @@ sinon.spy(cloudinary.api, 'resources')</p>
         <td class="code highlight">
           <pre class="javascript">  })
   it(<span class="hljs-string">'should be able to scrape a folder'</span>, (done) =&gt; {
-    nockBack(<span class="hljs-string">'nock'</span>, (writeRequests) =&gt; {
+    nockBack(<span class="hljs-string">'scrape'</span>, (writeRequests) =&gt; {
       Metalsmith(<span class="hljs-string">'test/fixtures/scrape'</span>)
       .use(classeur(<span class="hljs-built_in">Object</span>.assign(
         {
-          <span class="hljs-attr">srcId</span>: <span class="hljs-string">'CRYEgM2Ju4DHKKeqNDOG'</span>,
           <span class="hljs-attr">destPath</span>: <span class="hljs-string">'articles'</span>
         },
         config.get(<span class="hljs-string">'metalsmith-classeur'</span>)
       )))
       .use(<span class="hljs-function">(<span class="hljs-params">files</span>) =&gt;</span> {
-        assert.ok(files[<span class="hljs-string">'articles/test'</span>])
+        assert.ok(files[<span class="hljs-string">'articles/test-file'</span>])
       })
       .build(<span class="hljs-function">(<span class="hljs-params">err, files</span>) =&gt;</span> {
         <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> done(err)
-
-</pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td class="docs">
-          <div class="pilwrap">
-  <a class="pilcrow" href="#section-5" id="section-5"></a>
-</div>
-<p>if you're updating the test, uncomment this to write api requests to
-fixtures
-writeRequests()</p>
-
-        </td>
-        <td class="code highlight">
-          <pre class="javascript">        done()
+        writeRequests()
+        done()
       })
     })
   }).timeout(<span class="hljs-number">0</span>)
